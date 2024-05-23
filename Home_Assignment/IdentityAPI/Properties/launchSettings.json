@@ -1,0 +1,32 @@
+{
+  "profiles": {
+    "IdentityAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Database__ConnectionString": "mongodb+srv://sebdanictest12345:MzW2TFdrEwkPyC7a@cluster0.0bdglcy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5229"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:29866",
+      "sslPort": 0
+    }
+  }
+}
