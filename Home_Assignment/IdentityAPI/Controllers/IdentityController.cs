@@ -35,6 +35,8 @@ namespace IdentityAPI.Controllers
 
 			user.SetPassword(userDTO.Password, _encryptor);
 			user.Email = userDTO.Email;
+			user.FirstName = userDTO.Name;
+			user.LastName= userDTO.Surname;
 
 			await _context.CreateAsync(user);
 
