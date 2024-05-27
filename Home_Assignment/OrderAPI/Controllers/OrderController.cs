@@ -38,9 +38,9 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet("orders")]
-        public async Task<ActionResult<IEnumerable<Order>>> GetOrders([FromQuery] OrderDTO o)
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrders([FromQuery(Name = "userId")] string userId)
         {
-            var u = await _context.GetAllAsync(o.UserId);
+            var u = await _context.GetAllAsync(userId);
 
             if (u == null)
             {
@@ -50,9 +50,9 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet("orderDetails")]
-        public async Task<ActionResult<Order>> GetOrderbyID([FromQuery] OrderDTO o)
+        public async Task<ActionResult<Order>> GetOrderbyID([FromQuery(Name = "orderId")] string orderId)
         {
-            var u = await _context.GetByOrderIdAsync(o.OrderId);
+            var u = await _context.GetByOrderIdAsync(orderId);
 
             if (u == null)
             {
