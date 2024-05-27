@@ -12,5 +12,6 @@ namespace OrderAPI.Model
         public string? VideoId { get; set; }
         public string? UserId { get; set; }
         public decimal? Price { get; set; }
+        public DateTime? OrderDate { get; set; }
     }
 }

@@ -30,6 +30,7 @@ namespace OrderAPI.Controllers
             order.VideoId= o.VideoId;
             order.UserId= o.UserId;
             order.Price= o.Price;
+            order.OrderDate = DateTime.Now;
 
             await _context.CreateAsync(order);
 
@@ -37,7 +38,7 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet("orders")]
-        public async Task<ActionResult<IEnumerable<Order>>> GetOrders([FromQuery] Order o)
+        public async Task<ActionResult<IEnumerable<Order>>> GetOrders([FromQuery] OrderDTO o)
         {
             var u = await _context.GetAllAsync(o.UserId);
 
@@ -49,7 +50,7 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet("orderDetails")]
-        public async Task<ActionResult<Order>> GetOrderbyID([FromQuery] Order o)
+        public async Task<ActionResult<Order>> GetOrderbyID([FromQuery] OrderDTO o)
         {
             var u = await _context.GetByOrderIdAsync(o.OrderId);
 
