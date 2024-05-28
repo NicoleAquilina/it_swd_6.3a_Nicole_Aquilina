@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using OrderAPI.Model;
 using OrderAPI.Services;
 using System.Numerics;
@@ -10,10 +11,12 @@ namespace OrderAPI.Controllers
     public class OrderController : ControllerBase
     {
         private readonly OrderService _context;
+        private readonly PublisherService _publisher;
 
-        public OrderController(OrderService context)
+        public OrderController(OrderService context, PublisherService publisherService)
         {
             _context = context;
+            _publisher = publisherService;
         }
 
         [HttpPost("create")]
@@ -34,6 +37,8 @@ namespace OrderAPI.Controllers
 
             await _context.CreateAsync(order);
 
+            //Pubsub Publisher
+            await _publisher.PublishMessage(order);
             return Ok();
         }
 

@@ -5,9 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("Database"));
-
+builder.Services.Configure<GCPSettings>(builder.Configuration.GetSection("GCP"));
 
 builder.Services.AddSingleton<PaymentService>();
+builder.Services.AddHostedService<SubscriberService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
