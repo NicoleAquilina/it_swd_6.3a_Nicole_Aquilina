@@ -1,8 +1,12 @@
 ﻿using Google.Cloud.PubSub.V1;
 using Microsoft.Extensions.Options;
 using Microsoft.VisualBasic;
+using MongoDB.Bson.IO;
+using OrderAPI.Model;
+using PaymentAPI.Controllers;
 using PaymentAPI.Model;
-using System.ComponentModel;
+using Newtonsoft.Json;
+using JsonConvert = Newtonsoft.Json.JsonConvert;
 
 namespace PaymentAPI.Services
 {
@@ -10,9 +14,11 @@ namespace PaymentAPI.Services
     {
         public Timer? _timer = null;
         public SubscriptionName subscriptionName;
-        public SubscriberService(IOptions<GCPSettings> settings)
+        private readonly PaymentController _paymentController;
+        public SubscriberService(IOptions<SubGCPSettings> settings, PaymentController controller)
         {
             subscriptionName = new SubscriptionName(settings.Value.Project, settings.Value.Sub);
+            _paymentController = controller;
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -34,7 +40,18 @@ namespace PaymentAPI.Services
                 recievedMessages.Add(msg);
                 Console.WriteLine($"Recieved Message {msg.MessageId} published at {msg.PublishTime.ToDateTime()}");
 
-                Console.WriteLine($"Text : {msg.Data.ToStringUtf8()}");
+                var deserializedObject = JsonConvert.DeserializeObject<Order>(msg.Data.ToStringUtf8());
+                Payment payment = new Payment()
+                {
+                    Price = deserializedObject.Price,
+                    OrderId = deserializedObject.OrderId,
+                    DatePaid = DateTime.Now,
+                    UserId = deserializedObject.UserId
+                };
+                _paymentController.Create(payment);
+
+                Console.WriteLine("Payment Accepted");
+
                 subscriber.StopAsync(TimeSpan.FromSeconds(5));
 
                 return Task.FromResult(SubscriberClient.Reply.Ack);

@@ -682,6 +682,25 @@
         "runtime": {
           "lib/net6.0/ZstdSharp.dll": {}
         }
+      },
+      "OrderAPI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Google.Cloud.PubSub.V1": "3.13.0",
+          "MongoDB.Driver": "2.25.0",
+          "Newtonsoft.Json": "13.0.3",
+          "Swashbuckle.AspNetCore": "6.2.3"
+        },
+        "compile": {
+          "bin/placeholder/OrderAPI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OrderAPI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -1798,12 +1817,19 @@
         "zstdsharp.port.0.7.3.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "OrderAPI/1.0.0": {
+      "type": "project",
+      "path": "../OrderAPI/OrderAPI.csproj",
+      "msbuildProject": "../OrderAPI/OrderAPI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Google.Cloud.PubSub.V1 >= 3.13.0",
       "MongoDB.Driver >= 2.25.0",
+      "Newtonsoft.Json >= 13.0.3",
+      "OrderAPI >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1833,7 +1859,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ACER VX i7\\Desktop\\Assignements Semester 2\\DP\\Home_Assignment\\Home_Assignment\\OrderAPI\\OrderAPI.csproj": {
+              "projectPath": "C:\\Users\\ACER VX i7\\Desktop\\Assignements Semester 2\\DP\\Home_Assignment\\Home_Assignment\\OrderAPI\\OrderAPI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1853,6 +1883,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.25.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -1,6 +1,6 @@
 ﻿namespace PaymentAPI.Model
 {
-    public class GCPSettings
+    public class SubGCPSettings
     {
         public string Sub { get; set; } = null!;
         public string Project { get; set; } = null!;

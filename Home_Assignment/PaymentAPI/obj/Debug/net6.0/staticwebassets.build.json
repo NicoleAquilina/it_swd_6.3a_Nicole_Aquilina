@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "9uAMnStdJMBw+vAATtSc0PjES0sSFW33WuGl2h9zdt8=",
+  "Hash": "4MX0RG2KH9XJE+RO/bRijFlWg8SHhC0AERlTYH3Is3c=",
   "Source": "PaymentAPI",
   "BasePath": "_content/PaymentAPI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\ACER VX i7\\Desktop\\Assignements Semester 2\\DP\\Home_Assignment\\Home_Assignment\\OrderAPI\\OrderAPI.csproj",
+      "Version": 2,
+      "Source": "OrderAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

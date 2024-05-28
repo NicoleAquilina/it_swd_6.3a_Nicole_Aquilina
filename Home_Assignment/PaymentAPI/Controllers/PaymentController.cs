@@ -27,6 +27,7 @@ namespace PaymentAPI.Controllers
 
             var payment = new Payment();
             payment.OrderId= p.OrderId;
+            payment.UserId = p.UserId;
             payment.Price= p.Price; 
             payment.DatePaid= DateTime.Now;
 
@@ -35,7 +36,7 @@ namespace PaymentAPI.Controllers
             return Ok();
         }
 
-        [HttpGet("create")]
+        [HttpGet("getOrder")]
         public async Task<ActionResult<Payment>> Get([FromQuery(Name = "orderId")] string orderID)
         {
             var u = await _context.GetAsync(orderID);

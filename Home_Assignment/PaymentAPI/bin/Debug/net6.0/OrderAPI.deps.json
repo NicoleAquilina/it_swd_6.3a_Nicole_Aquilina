@@ -6,16 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "PaymentAPI/1.0.0": {
+      "OrderAPI/1.0.0": {
         "dependencies": {
           "Google.Cloud.PubSub.V1": "3.13.0",
           "MongoDB.Driver": "2.25.0",
           "Newtonsoft.Json": "13.0.3",
-          "OrderAPI": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
-          "PaymentAPI.dll": {}
+          "OrderAPI.dll": {}
         }
       },
       "AWSSDK.Core/3.7.100.14": {
@@ -399,22 +398,11 @@
             "fileVersion": "0.7.3.0"
           }
         }
-      },
-      "OrderAPI/1.0.0": {
-        "dependencies": {
-          "Google.Cloud.PubSub.V1": "3.13.0",
-          "MongoDB.Driver": "2.25.0",
-          "Newtonsoft.Json": "13.0.3",
-          "Swashbuckle.AspNetCore": "6.2.3"
-        },
-        "runtime": {
-          "OrderAPI.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "PaymentAPI/1.0.0": {
+    "OrderAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -712,11 +700,6 @@
       "sha512": "sha512-U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
-    },
-    "OrderAPI/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
