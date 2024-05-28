@@ -29,6 +29,5 @@ namespace OrderAPI.Services
 
         public async Task CreateAsync(Order order) =>
             await _orderCollection.InsertOneAsync(order);
-
     }
 }

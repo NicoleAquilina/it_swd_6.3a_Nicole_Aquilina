@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderAPI", "OrderAPI\OrderA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentAPI", "PaymentAPI\PaymentAPI.csproj", "{263E882E-9D48-44BF-83A7-940A9FC0C8AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchlistAPI", "WatchlistAPI\WatchlistAPI.csproj", "{D820BC95-9BE8-4407-A8A1-86F20D0CF766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{263E882E-9D48-44BF-83A7-940A9FC0C8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{263E882E-9D48-44BF-83A7-940A9FC0C8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{263E882E-9D48-44BF-83A7-940A9FC0C8AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D820BC95-9BE8-4407-A8A1-86F20D0CF766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D820BC95-9BE8-4407-A8A1-86F20D0CF766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D820BC95-9BE8-4407-A8A1-86F20D0CF766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D820BC95-9BE8-4407-A8A1-86F20D0CF766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
