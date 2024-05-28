@@ -22,13 +22,22 @@ namespace VideoCatalogueAPI.Controllers
 
             List<Video> videos = new List<Video>();
             var response = await client.GetAsync(request);
-            var content = JsonConvert.DeserializeObject<JToken>(response.Content);
-            foreach(var result in content["results"])
+            dynamic content = JsonConvert.DeserializeObject<JToken>(response.Content);
+            foreach(var result in content.results)
             {
-                var video = new Video();
-                video.Id = result["id"].Value<string>();
-                video.Title = result["titleText"]["text"].Value<string>();
-                video.ReleaseYear = result["releaseYear"]["year"].Value<int>();
+                string imageUrl = null;
+
+                if(result.primaryImage !=  null && result.primaryImage.url !=null)
+                {
+                    imageUrl = result.primaryImage.url;
+                }
+                var video = new Video()
+                {
+                    Id = result.id,
+                    Title = result.titleText.text,
+                    ReleaseYear = result.releaseYear.year,
+                    PictureURI = imageUrl
+                };
 
                 videos.Add(video);
             }
@@ -44,13 +53,21 @@ namespace VideoCatalogueAPI.Controllers
             request.AddHeader("x-rapidapi-host", "moviesdatabase.p.rapidapi.com");
 
             var response = await client.GetAsync(request);
-            var content = JsonConvert.DeserializeObject<JToken>(response.Content);
-            content = content["results"];
-            var video = new Video();
-            video.Id = content["id"].Value<string>();
-            video.Title = content["titleText"]["text"].Value<string>();
-            video.ReleaseYear = content["releaseYear"]["year"].Value<int>();
+            dynamic result = JsonConvert.DeserializeObject<JToken>(response.Content);
+            result = result.results;
+            string imageUrl = null;
 
+            if (result.primaryImage != null && result.primaryImage.url != null)
+            {
+                imageUrl = result.primaryImage.url;
+            }
+            var video = new Video()
+            {
+                Id = result.id,
+                Title = result.titleText.text,
+                ReleaseYear = result.releaseYear.year,
+                PictureURI = imageUrl
+            };
             return Ok(video);
         }
     }

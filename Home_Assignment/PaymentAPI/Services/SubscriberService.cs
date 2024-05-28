@@ -14,11 +14,11 @@ namespace PaymentAPI.Services
     {
         public Timer? _timer = null;
         public SubscriptionName subscriptionName;
-        private readonly PaymentController _paymentController;
-        public SubscriberService(IOptions<SubGCPSettings> settings, PaymentController controller)
+        private readonly PaymentService PaymentService;
+        public SubscriberService(IOptions<SubGCPSettings> settings, PaymentService Service)
         {
             subscriptionName = new SubscriptionName(settings.Value.Project, settings.Value.Sub);
-            _paymentController = controller;
+            PaymentService = Service;
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -48,7 +48,7 @@ namespace PaymentAPI.Services
                     DatePaid = DateTime.Now,
                     UserId = deserializedObject.UserId
                 };
-                _paymentController.Create(payment);
+                PaymentService.CreateAsync(payment);
 
                 Console.WriteLine("Payment Accepted");
 

@@ -11,7 +11,7 @@ builder.Services.Configure<SubGCPSettings>(builder.Configuration.GetSection("GCP
 
 builder.Services.AddSingleton<PaymentService>();
 builder.Services.AddHostedService<SubscriberService>();
-builder.Services.AddSingleton<PaymentController>();
+//builder.Services.AddSingleton<PaymentController>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
