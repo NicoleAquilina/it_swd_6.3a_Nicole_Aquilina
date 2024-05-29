@@ -826,8 +826,16 @@ C:\Users\danie\source\repos\Identity\WebApp\obj\Debug\net6.0\WebApp.dll
 C:\Users\danie\source\repos\Identity\WebApp\obj\Debug\net6.0\refint\WebApp.dll
 C:\Users\danie\source\repos\Identity\WebApp\obj\Debug\net6.0\WebApp.pdb
 C:\Users\danie\source\repos\Identity\WebApp\obj\Debug\net6.0\ref\WebApp.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.13.lk8051etyl.js
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\dotnet.timezones.blat
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\dotnet.wasm
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt.dat
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt_CJK.dat
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt_EFIGS.dat
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt_no_CJK.dat
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll
@@ -835,6 +843,7 @@ C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assi
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.WebAssembly.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.CSharp.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.dll
@@ -851,16 +860,6 @@ C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assi
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Primitives.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.JSInterop.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.JSInterop.WebAssembly.dll
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.Pipelines.dll
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.13.lk8051etyl.js
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\dotnet.timezones.blat
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\dotnet.wasm
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt.dat
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt_CJK.dat
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt_EFIGS.dat
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\icudt_no_CJK.dat
-C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.CSharp.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.VisualBasic.Core.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.VisualBasic.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Win32.Primitives.dll
@@ -916,6 +915,7 @@ C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assi
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.FileSystem.Watcher.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.IsolatedStorage.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.MemoryMappedFiles.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.Pipelines.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.Pipes.AccessControl.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.Pipes.dll
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WebApp\bin\Debug\net6.0\wwwroot\_framework\System.IO.UnmanagedMemoryStream.dll

@@ -9,7 +9,7 @@
         "Database__ConnectionString": "mongodb+srv://sebdanictest12345:MzW2TFdrEwkPyC7a@cluster0.0bdglcy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5229"
+      "applicationUrl": "http://localhost:5031"
     },
     "IIS Express": {
       "commandName": "IISExpress",

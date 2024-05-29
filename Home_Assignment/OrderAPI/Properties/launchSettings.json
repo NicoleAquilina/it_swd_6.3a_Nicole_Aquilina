@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:5241",
+      "applicationUrl": "http://localhost:5033",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "Database__ConnectionString": "mongodb+srv://sebdanictest12345:MzW2TFdrEwkPyC7a@cluster0.0bdglcy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"

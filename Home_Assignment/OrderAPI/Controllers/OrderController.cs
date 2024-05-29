@@ -61,7 +61,7 @@ namespace OrderAPI.Controllers
 
             if (u == null)
             {
-                return BadRequest("No orders were allocated to this user");
+                return BadRequest("This Order does not exist");
             }
             return Ok(u);
         }

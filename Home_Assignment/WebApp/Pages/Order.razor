@@ -1,0 +1,73 @@
+﻿@page "/order/{SelectedVideo}"
+@using WebApp.Models
+@inherits OrderBase
+
+<h1 style="font-size: 24px; color: #333; margin-bottom: 20px;">Place Order</h1>
+
+@if (Video != null)
+{
+        Price = Video.Title.Length;
+        if (Video.PictureURI == null)
+        {
+            <div style="display: flex; justify-content: center;">
+                <div class="card" style="width: 300px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src=" https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Coverdvdcover.jpg/220px-Coverdvdcover.jpg" alt="@Video.Title" style="width: 100%; height: auto; border-radius: 5px 5px 0 0;">
+                    <div class="card-body" style="padding: 15px;">
+                        <h2 style="font-size: 20px; color: #666; margin-bottom: 10px;">@Video.Title</h2>
+                        <p style="font-size: 16px; color: #888; margin-bottom: 0;">Year Released: @Video.ReleaseYear</p>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+             <div style="display: flex; justify-content: center;">
+               <div class="card" style="width: 300px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <img src="@Video.PictureURI" alt="@Video.Title" style="width: 100%; height: auto; border-radius: 5px 5px 0 0;">
+                    <div class="card-body" style="padding: 15px;">
+                        <h2 style="font-size: 20px; color: #666; margin-bottom: 10px;">@Video.Title</h2>
+                        <p style="font-size: 16px; color: #888; margin-bottom: 0;">Year Released: @Video.ReleaseYear</p>
+                    </div>
+                </div>
+            </div>
+        }
+        <!-- Second Card: Order Details -->
+        <div class="card mb-4" style="border: 1px solid #ddd; border-radius: 5px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <div class="card-body" style="padding: 15px;">
+                <h2 style="font-size: 20px; color: #666; margin-bottom: 10px;">Order Details</h2>
+                <p style="font-size: 16px; color: #888; margin-bottom: 5px;">Video: @Video.Title</p>
+                <p style="font-size: 16px; color: #888; margin-bottom: 5px;">Cost: € @Price</p>
+                <!-- Add more order details here if needed -->
+            <button @onclick="() => PlaceOrder()" class="btn btn-primary">Place Order</button>
+            </div>
+        </div>
+
+         <!-- Thank You Modal -->
+    @if (showThankYouModal == true)
+    {
+        <div class="modal show d-flex justify-content-center align-items-center" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.5);">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thank You!</h5>
+                        <button type="button" class="close" aria-label="Close" @onclick="CloseModal">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Thank you for ordering with us!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+}
+
+@code{
+    private void CloseModal()
+    {
+        showThankYouModal = false;
+    }
+}
+

@@ -18,7 +18,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+//mywebapp port
+app.UseCors(policy => policy.WithOrigins("http://localhost:5070")
+	.AllowAnyMethod()
+	.AllowAnyHeader()
+);
 app.UseAuthentication();
 app.UseAuthorization();
 

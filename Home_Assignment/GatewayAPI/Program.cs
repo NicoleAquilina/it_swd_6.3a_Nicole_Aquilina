@@ -9,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy",
-        builder => builder.WithOrigins("http://localhost:5245") //webAPP
+        builder => builder.WithOrigins("http://localhost:5070") //webAPP
         .AllowAnyMethod()
         .AllowAnyHeader());
 });

@@ -7,7 +7,7 @@
     {
       "UpstreamPathTemplate": "/gateway/Customer/{everything}",
       "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
-      "DownstreamPathTemplate": "/gateway/Customer/{everything}",
+      "DownstreamPathTemplate": "/api/Customer/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -20,7 +20,7 @@
     {
       "UpstreamPathTemplate": "/gateway/Video/{everything}",
       "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
-      "DownstreamPathTemplate": "/gateway/Video/{everything}",
+      "DownstreamPathTemplate": "/api/Video/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -33,7 +33,7 @@
     {
       "UpstreamPathTemplate": "/gateway/Order/{everything}",
       "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
-      "DownstreamPathTemplate": "/gateway/Order/{everything}",
+      "DownstreamPathTemplate": "/api/Order/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -46,7 +46,7 @@
     {
       "UpstreamPathTemplate": "/gateway/Payment/{everything}",
       "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
-      "DownstreamPathTemplate": "/gateway/Payment/{everything}",
+      "DownstreamPathTemplate": "/api/Payment/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -59,7 +59,7 @@
     {
       "UpstreamPathTemplate": "/gateway/Watchlist/{everything}",
       "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
-      "DownstreamPathTemplate": "/gateway/Watchlist/{everything}",
+      "DownstreamPathTemplate": "/api/Watchlist/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {

@@ -13,8 +13,7 @@ namespace VideoCatalogueAPI.Controllers
     public class VideoController : ControllerBase
     {
 
-        [HttpGet("getVideosByGenre")]
-        [Authorize]
+        [HttpGet("getbygenre")]
         public async Task<ActionResult<List<Video>>> GetVideosByGenre(string genre)
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
@@ -75,7 +74,6 @@ namespace VideoCatalogueAPI.Controllers
 
 
         [HttpGet("genres")]
-        [Authorize]
         public async Task<ActionResult<List<string>>> GetGenre()
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
@@ -99,7 +97,7 @@ namespace VideoCatalogueAPI.Controllers
 
                 genre.Add(genreName);
             }
-            return Ok(genre);
+            return genre;
         }
     }
 }

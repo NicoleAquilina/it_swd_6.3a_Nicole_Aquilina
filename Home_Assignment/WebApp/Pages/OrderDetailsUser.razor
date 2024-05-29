@@ -1,0 +1,59 @@
+﻿@page "/orderuser"
+@using WebApp.Models
+@inherits OrderDetailsBase
+
+@if (Orders != null && Orders.Any())
+{
+    <div class="container">
+        @foreach (var order in Orders)
+        {
+            SelectedVideo = order.VideoId; //need to rearrange
+            GetTitleOrder(order.VideoId);
+            <div class="card my-3 shadow-sm">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title d-inline">Order ID: @order.OrderId</h5>
+                    <button class="btn btn-primary float-right" @onclick="() => ToggleDropdown(order.OrderId)">Details</button>
+                </div>
+                @if (IsDropdownShown(@order.OrderId))
+                {
+                    <div class="card-body">
+                        <hr />
+                        <h6>Order Details</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Film Title: @Video.Title</li>
+                            <li class="list-group-item">Order Date: @order.OrderDate.ToString()</li>
+                            <li class="list-group-item">Total Amount Paid: €@order.Price</li>
+                        </ul>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div style="text-align: center; margin-top: 50px;">
+        <p>There are no orders for this client.</p>
+    </div>
+}
+
+@code {    // Dictionary to track the state of each order's dropdown
+    private Dictionary<string, bool> dropdownStates = new Dictionary<string, bool>();
+
+    private void ToggleDropdown(string orderId)
+    {
+        if (dropdownStates.ContainsKey(orderId))
+        {
+            dropdownStates[orderId] = !dropdownStates[orderId];
+        }
+        else
+        {
+            dropdownStates[orderId] = true;
+        }
+    }
+
+    private bool IsDropdownShown(string orderId)
+    {
+        return dropdownStates.ContainsKey(orderId) && dropdownStates[orderId];
+    }
+}
