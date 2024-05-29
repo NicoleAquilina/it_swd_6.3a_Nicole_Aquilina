@@ -13,7 +13,7 @@ namespace VideoCatalogueAPI.Controllers
     public class VideoController : ControllerBase
     {
 
-        [HttpGet("genre")]
+        [HttpGet("getVideosByGenre")]
         [Authorize]
         public async Task<ActionResult<List<Video>>> GetVideosByGenre(string genre)
         {
@@ -47,7 +47,6 @@ namespace VideoCatalogueAPI.Controllers
         }
 
         [HttpGet("title")]
-        [Authorize]
         public async Task<ActionResult<Video>> GetTitle(string Id)
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
@@ -72,6 +71,35 @@ namespace VideoCatalogueAPI.Controllers
                 PictureURI = imageUrl
             };
             return Ok(video);
+        }
+
+
+        [HttpGet("genres")]
+        [Authorize]
+        public async Task<ActionResult<List<string>>> GetGenre()
+        {
+            var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
+            var request = new RestRequest($"/titles/utils/genres");
+            request.AddHeader("x-rapidapi-key", "f95eee0b14msh8cdb9371aab938ep1d1949jsn8c180758d997");
+            request.AddHeader("x-rapidapi-host", "moviesdatabase.p.rapidapi.com");
+
+            var response = await client.GetAsync(request);
+            dynamic content = JsonConvert.DeserializeObject<JToken>(response.Content);
+
+            List<string> genre = new List<string>();
+
+            foreach (var result in content.results)
+            {
+                string genreName = "";
+
+                if (result != null)
+                {
+                    genreName = result;
+                }
+
+                genre.Add(genreName);
+            }
+            return Ok(genre);
         }
     }
 }
