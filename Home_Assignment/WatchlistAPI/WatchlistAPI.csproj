@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Middleware\Middleware.csproj" />
     <ProjectReference Include="..\VideoCatalogueAPI\VideoCatalogueAPI.csproj" />
   </ItemGroup>
 

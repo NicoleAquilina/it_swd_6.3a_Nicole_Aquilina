@@ -1,0 +1,72 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5003"
+  },
+  "Routes": [
+    //CustomerAPI
+    {
+      "UpstreamPathTemplate": "/gateway/Customer/{everything}",
+      "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
+      "DownstreamPathTemplate": "/gateway/Customer/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5031
+        }
+      ]
+    },
+    //VideoCatelogAPI
+    {
+      "UpstreamPathTemplate": "/gateway/Video/{everything}",
+      "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
+      "DownstreamPathTemplate": "/gateway/Video/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5032
+        }
+      ]
+    },
+    //OrderAPI
+    {
+      "UpstreamPathTemplate": "/gateway/Order/{everything}",
+      "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
+      "DownstreamPathTemplate": "/gateway/Order/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5033
+        }
+      ]
+    },
+    //PaymentAPI
+    {
+      "UpstreamPathTemplate": "/gateway/Payment/{everything}",
+      "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
+      "DownstreamPathTemplate": "/gateway/Payment/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5034
+        }
+      ]
+    },
+    //WatchListAPI
+    {
+      "UpstreamPathTemplate": "/gateway/Watchlist/{everything}",
+      "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
+      "DownstreamPathTemplate": "/gateway/Watchlist/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5035
+        }
+      ]
+    }
+  ]
+}

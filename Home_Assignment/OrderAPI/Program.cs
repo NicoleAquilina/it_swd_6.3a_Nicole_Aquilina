@@ -1,3 +1,4 @@
+using Middleware;
 using OrderAPI.Model;
 using OrderAPI.Services;
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("Database"));
 builder.Services.Configure<GCPSettings>(builder.Configuration.GetSection("GCP"));
+
+builder.Services.AddJwtAuthentication(builder.Configuration);
 
 builder.Services.AddSingleton<OrderService>();
 builder.Services.AddSingleton<PublisherService>();

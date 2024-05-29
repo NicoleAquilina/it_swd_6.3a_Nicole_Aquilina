@@ -3,6 +3,7 @@ using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using VideoCatalogueAPI.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace VideoCatalogueAPI.Controllers
 {
@@ -13,6 +14,7 @@ namespace VideoCatalogueAPI.Controllers
     {
 
         [HttpGet("genre")]
+        [Authorize]
         public async Task<ActionResult<List<Video>>> GetVideosByGenre(string genre)
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
@@ -45,6 +47,7 @@ namespace VideoCatalogueAPI.Controllers
         }
 
         [HttpGet("title")]
+        [Authorize]
         public async Task<ActionResult<Video>> GetTitle(string Id)
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
