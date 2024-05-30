@@ -23,7 +23,7 @@ namespace IdentityAPI.Controllers
 		}
 
 		[HttpPost("register")]
-		public async Task<ActionResult> Register([FromBody] UserDTO userDTO)
+		public async Task<ActionResult> Register([FromBody] UserRegister userDTO)
 		{
 			var u = await _context.GetByEmailAsync(userDTO.Email);
 
@@ -35,6 +35,8 @@ namespace IdentityAPI.Controllers
 
 			user.SetPassword(userDTO.Password, _encryptor);
 			user.Email = userDTO.Email;
+			user.Surname = userDTO.Surname;
+			user.Name= userDTO.Name;
 
 			await _context.CreateAsync(user);
 
