@@ -24,7 +24,7 @@ namespace WebApp.Services
 
         public async Task<RegisterResult> Register(RegisterModel registerModel)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/identity/register", registerModel);
+            var result = await _httpClient.PostAsJsonAsync("/gateway/Identity/register", registerModel);
 
             RegisterResult registerResult = new RegisterResult();
 
@@ -40,7 +40,7 @@ namespace WebApp.Services
 
         public async Task<LoginResult> Login(LoginModel loginModel)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/identity/login", loginModel);
+            var result = await _httpClient.PostAsJsonAsync("/gateway/Identity/login", loginModel);
 
             LoginResult loginResult = new LoginResult();
 

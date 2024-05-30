@@ -5,9 +5,9 @@
   "Routes": [
     //CustomerAPI
     {
-      "UpstreamPathTemplate": "/gateway/Customer/{everything}",
+      "UpstreamPathTemplate": "/gateway/Identity/{everything}",
       "UpstreamHttpMethod": [ "Post", "Get", "Delete" ],
-      "DownstreamPathTemplate": "/api/Customer/{everything}",
+      "DownstreamPathTemplate": "/api/Identity/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
