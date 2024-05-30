@@ -29,7 +29,7 @@ namespace PaymentAPI.Controllers
             payment.OrderId= p.OrderId;
             payment.UserId = p.UserId;
             payment.Price= p.Price; 
-            payment.DatePaid= DateTime.Now;
+            payment.DatePaid= DateTime.UtcNow;
 
             await _context.CreateAsync(payment);
 

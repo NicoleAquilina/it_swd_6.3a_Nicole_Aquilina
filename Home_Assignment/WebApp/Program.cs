@@ -17,5 +17,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, ApiAuthenticationStatePr
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICatalogService, CatalogService>();
 builder.Services.AddScoped<IOrderService,OrderService>();
+builder.Services.AddScoped<IPaymentService, PaymentServive>();
+
 
 await builder.Build().RunAsync();

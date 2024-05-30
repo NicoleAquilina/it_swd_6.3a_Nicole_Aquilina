@@ -33,7 +33,7 @@ namespace OrderAPI.Controllers
             order.VideoId= o.VideoId;
             order.UserId= o.UserId;
             order.Price= o.Price;
-            order.OrderDate = DateTime.Now;
+            order.OrderDate = DateTime.UtcNow;
 
             await _context.CreateAsync(order);
 

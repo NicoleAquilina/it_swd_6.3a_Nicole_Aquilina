@@ -56,7 +56,6 @@ namespace PaymentAPI.Services
 
                 return Task.FromResult(SubscriberClient.Reply.Ack);
             });
-
         }
 
         public Task StopAsync(CancellationToken canellationToken)

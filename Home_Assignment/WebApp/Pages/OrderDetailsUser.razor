@@ -7,8 +7,6 @@
     <div class="container">
         @foreach (var order in Orders)
         {
-            SelectedVideo = order.VideoId; //need to rearrange
-            GetTitleOrder(order.VideoId);
             <div class="card my-3 shadow-sm">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title d-inline">Order ID: @order.OrderId</h5>
@@ -16,14 +14,17 @@
                 </div>
                 @if (IsDropdownShown(@order.OrderId))
                 {
-                    <div class="card-body">
+                   <div class="card-body">
                         <hr />
                         <h6>Order Details</h6>
                         <ul class="list-group">
-                            <li class="list-group-item">Film Title: @Video.Title</li>
                             <li class="list-group-item">Order Date: @order.OrderDate.ToString()</li>
+                            <li class="list-group-item">Status: Confirmed</li>
                             <li class="list-group-item">Total Amount Paid: €@order.Price</li>
                         </ul>
+                        <div class="nav-item px-3 mt-3">
+                            <button class="oi oi-credit-card float-right" @onclick="() => PaymentDetails(order.OrderId)"></button>
+                        </div>
                     </div>
                 }
             </div>
@@ -37,7 +38,8 @@ else
     </div>
 }
 
-@code {    // Dictionary to track the state of each order's dropdown
+@code {
+    // Dictionary to track the state of each order's dropdown
     private Dictionary<string, bool> dropdownStates = new Dictionary<string, bool>();
 
     private void ToggleDropdown(string orderId)
@@ -56,4 +58,10 @@ else
     {
         return dropdownStates.ContainsKey(orderId) && dropdownStates[orderId];
     }
+
+    private void PaymentDetails(string orderId)
+    {
+         NavigationManager.NavigateTo($"/payment/{orderId}");
+    }
+
 }

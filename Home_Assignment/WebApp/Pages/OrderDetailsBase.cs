@@ -14,6 +14,9 @@ namespace WebApp.Pages
 
         [Inject]
         public AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
         [Inject]
         public IEnumerable<OrderModel> Orders { get; set; }
 
@@ -28,11 +31,5 @@ namespace WebApp.Pages
             var userId = user.FindFirst("userId")?.Value;
             Orders = await OrderService.GetAll(userId);
         }
-
-        protected  async Task GetTitleOrder(string videoId)
-        {
-            Video = await CatalogService.GetVideo(SelectedVideo);
-        }
-
     }
 }

@@ -10,6 +10,8 @@ namespace WebApp.Pages
         [Inject]
         public ICatalogService CatalogService { get; set; }
         [Inject]
+        public IPaymentService PaymentService { get; set; }
+        [Inject]
         public IOrderService OrderService { get; set; }
 
         [Inject]
@@ -23,6 +25,7 @@ namespace WebApp.Pages
         public decimal Price { get; set; }
 
         public VideoModel Video { get; set; }
+        public PaymentModel Payment { get; set; }
 
         public bool showThankYouModal { get; set; }
 
@@ -46,7 +49,7 @@ namespace WebApp.Pages
                     order.VideoId = SelectedVideo;
                     order.UserId = userId;
                     order.Price = Price;
-                    order.OrderDate = DateTime.Now;
+                    order.OrderDate = DateTime.UtcNow;
 
                     await OrderService.Create(order);
                     showThankYouModal = true;

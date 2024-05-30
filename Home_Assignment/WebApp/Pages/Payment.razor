@@ -1,0 +1,25 @@
+﻿@page "/payment/{OrderID}"
+@using WebApp.Models
+@inherits PaymentBase
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow-lg" style="width: 24rem;">
+        <div class="card-header text-center">
+            <h4>Payment Details</h4>
+        </div>
+        <div class="card-body">
+            @if (Payment != null)
+            {
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Order ID:</strong> @Payment.OrderId</li>
+                    <li class="list-group-item"><strong>Payment Date:</strong> @Payment.DatePaid.ToString()</li>
+                    <li class="list-group-item"><strong>Total Amount Paid:</strong> €@Payment.Price</li>
+                </ul>
+            }
+            else
+            {
+                <p class="text-center">Loading payment details...</p>
+            }
+        </div>
+    </div>
+</div>
