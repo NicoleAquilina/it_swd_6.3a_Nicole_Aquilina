@@ -1,0 +1,58 @@
+﻿@page "/watchlist"
+@using WebApp.Models
+@inherits WatchlistBase
+
+@if(Watchlist == null)
+{
+	<h3>Empty WatchList </h3>
+}
+else
+{
+    <h3>Your WatchList</h3>
+    <ul class="video-list">
+        @foreach (var video in Video)
+        {
+            <li class="video-item">
+                <h4>@video.Title</h4>
+                <p>Release Year : @video.ReleaseYear</p>
+                <button class="delete-button" @onclick="() => DeleteVideo(video.Id)">Delete</button>
+            </li>
+        }
+    </ul>
+}
+
+<style>
+    .video-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .video-item {
+        background-color: #f8f8f8;
+        margin: 10px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        position: relative;
+    }
+
+        .video-item h4 {
+            margin: 0 0 10px 0;
+        }
+
+    .delete-button {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+        .delete-button:hover {
+            background-color: #c0392b;
+        }
+</style>

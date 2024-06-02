@@ -13,6 +13,8 @@ namespace WebApp.Pages
         public IPaymentService PaymentService { get; set; }
         [Inject]
         public IOrderService OrderService { get; set; }
+        [Inject]
+        public IWatchlistService watchlistService { get; set; }
 
         [Inject]
         public AuthenticationStateProvider AuthenticationStateProvider { get; set; }
@@ -52,6 +54,12 @@ namespace WebApp.Pages
                     order.OrderDate = DateTime.UtcNow;
 
                     await OrderService.Create(order);
+                    bool check = await CheckInWatchList(userId, SelectedVideo);
+                    if(check == true)
+                    {
+                        //video is in the watchlist => Remove
+                        await watchlistService.Remove(userId, SelectedVideo);
+                    }
                     showThankYouModal = true;
                 }
                 catch(Exception ex)
@@ -60,6 +68,28 @@ namespace WebApp.Pages
                     Console.WriteLine($"Error placing order: {ex.Message}");
                 }
             }
+        }
+
+
+        protected async Task<bool> CheckInWatchList(string userId,string videoId)
+        {
+            WatchlistModel w = await watchlistService.Get(userId);
+
+            if (w == null || w.VideoIds == null)
+            {
+                return false;
+            }
+
+            // Check if any of the videoIds exist in the watchlist
+            foreach (var v in w.VideoIds)
+            {
+                if (w.VideoIds.Contains(v))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
     }

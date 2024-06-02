@@ -46,7 +46,7 @@ namespace WatchlistAPI.Controllers
             return Ok();
         }
 
-        [HttpGet("getTitles")]
+        [HttpGet("get")]
         public async Task<ActionResult<Watchlist>> GetTitles([FromQuery(Name = "userId")] string userId)
         {
             var u = await _context.GetAllAsync(userId);

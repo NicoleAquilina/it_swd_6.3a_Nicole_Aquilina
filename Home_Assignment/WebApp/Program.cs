@@ -18,6 +18,8 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICatalogService, CatalogService>();
 builder.Services.AddScoped<IOrderService,OrderService>();
 builder.Services.AddScoped<IPaymentService, PaymentServive>();
+builder.Services.AddScoped<IWatchlistService, WatchlistService>();
+
 
 
 await builder.Build().RunAsync();

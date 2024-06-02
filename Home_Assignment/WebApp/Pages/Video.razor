@@ -49,7 +49,7 @@ else
                                         <h5 style="font-size: 1rem; margin-bottom: 5px; font-weight: bold;">@item.Title</h5>
                                         <p style="font-size: 0.9rem; margin-bottom: 0; color: #666;">Year Released : @item.ReleaseYear</p>
                                         <button @onclick="() => PlaceOrder(item.Id)" class="btn btn-success oi oi-plus"></button>
-                                        <button @onclick="() => PlaceOrder(item.Id)" class="btn btn-danger oi oi-heart"></button>
+                                        <button @onclick="() => AddWatchlist(item.Id)" class="btn btn-danger oi oi-heart"></button>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ else
                                         <p style="font-size: 0.9rem; margin-bottom: 0; color: #666;">Year Released : @item.ReleaseYear</p>
                                         <div style="margin-top: 10px;">
                                             <button @onclick="() => PlaceOrder(item.Id)" class="btn btn-success oi oi-plus"></button>
-                                            <button @onclick="() => PlaceOrder(item.Id)" class="btn btn-danger oi oi-heart"></button>
+                                            <button @onclick="() => AddWatchlist(item.Id)" class="btn btn-danger oi oi-heart"></button>
                                         </div>
                                     </div>
                                 </div>

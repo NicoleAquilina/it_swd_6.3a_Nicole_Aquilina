@@ -9,6 +9,10 @@ namespace WebApp.Pages
 	{
 		[Inject]
 		public ICatalogService CatalogService { get; set; }
+        [Inject]
+        public IWatchlistService watchlistService { get; set; }
+        [Inject]
+        public AuthenticationStateProvider AuthenticationStateProvider { get; set; }
 
         [Inject]
         public NavigationManager NavigationManager { get; set; }
@@ -18,6 +22,8 @@ namespace WebApp.Pages
 		public string SelectedGenre { get; set; }
         public IEnumerable<VideoModel> Videos { get; set; }
 
+        public bool added { get; set; }
+
         protected override async Task OnInitializedAsync()
 		{
 			Genre = await CatalogService.GetGenre();
@@ -26,6 +32,17 @@ namespace WebApp.Pages
         {
             SelectedGenre = e.Value.ToString();
             Videos = await CatalogService.GetVideos(SelectedGenre);
+        }
+
+        public async Task AddWatchlist(string videoId)
+        {
+            List<string> video = new List<string>();
+            video.Add(videoId);
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+            var userId = user.FindFirst("userId")?.Value;
+            await watchlistService.Create(video,userId);
+            NavigationManager.NavigateTo("/watchlist");
         }
     }
 }
