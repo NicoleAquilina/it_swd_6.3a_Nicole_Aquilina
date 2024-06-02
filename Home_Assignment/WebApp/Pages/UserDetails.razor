@@ -1,0 +1,63 @@
+﻿@page "/userdetails"
+@using WebApp.Models
+@inherits UserDetailsBase
+
+@if(User == null)
+{
+	<h3> Loading User Details ... </h3>
+}
+else
+{
+    <div class="user-details-container">
+        <h2>User Details</h2>
+        <div class="user-detail">
+            <label>Name:</label>
+            <span>@User.Name</span>
+        </div>
+        <div class="user-detail">
+            <label>Surname:</label>
+            <span>@User.Surname</span>
+        </div>
+        <div class="user-detail">
+            <label>Email:</label>
+            <span>@User.Email</span>
+        </div>
+    </div>
+}
+
+
+<style>
+    .user-details-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .user-details-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+    .user-detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+        .user-detail label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .user-detail span {
+            color: #777;
+        }
+</style>

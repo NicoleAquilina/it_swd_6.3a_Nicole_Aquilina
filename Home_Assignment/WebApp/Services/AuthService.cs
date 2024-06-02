@@ -69,5 +69,18 @@ namespace WebApp.Services
             ((ApiAuthenticationStateProvider)_authenticationStateProvider).MarkUserAsLoggedOut();
             _httpClient.DefaultRequestHeaders.Authorization = null;
         }
-    }
+
+		public async Task<RegisterModel> Get(string id)
+		{
+			try
+			{
+				var user = await _httpClient.GetFromJsonAsync<RegisterModel>($"/gateway/Identity/get?userid={id}");
+				return user;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+	}
 }

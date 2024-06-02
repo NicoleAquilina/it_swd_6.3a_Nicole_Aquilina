@@ -89,5 +89,17 @@ namespace IdentityAPI.Controllers
 			}
 		}
 
+		[HttpGet("get")]
+		public async Task<ActionResult<User>> Get([FromQuery(Name = "userid")] string id)
+		{
+			var u = await _context.GetAsync(id);
+
+			if (u == null)
+			{
+				return BadRequest("User does not exist");
+			}
+			return Ok(u);
+		}
+
 	}
 }
