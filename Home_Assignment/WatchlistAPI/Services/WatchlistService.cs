@@ -34,8 +34,34 @@ namespace WatchlistAPI.Services
             var update = Builders<Watchlist>.Update.Pull(x => x.VideoIds, videoId);
             await _watchlistCollection.UpdateOneAsync(filter, update);
         }
-            
+
         //Update watchlist
-        //public async Task UpdateAsync(string userID)
+        public async Task UpdateAsync(string userId, List<string> videoIds)
+        {
+            var filter = Builders<Watchlist>.Filter.Eq(x => x.UserId, userId);
+            var update = Builders<Watchlist>.Update.AddToSetEach(x => x.VideoIds, videoIds);
+            await _watchlistCollection.UpdateOneAsync(filter, update);
+        }
+        //CheckVideoExists
+        public async Task<bool> CheckVideoExistsInWatchlistAsync(string userId, List<string> videoIds)
+        {
+            var watchlist = await _watchlistCollection.Find(x => x.UserId == userId).FirstOrDefaultAsync();
+
+            if (watchlist == null || watchlist.VideoIds == null)
+            {
+                return false;
+            }
+
+            // Check if any of the videoIds exist in the watchlist
+            foreach (var videoId in videoIds)
+            {
+                if (watchlist.VideoIds.Contains(videoId))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

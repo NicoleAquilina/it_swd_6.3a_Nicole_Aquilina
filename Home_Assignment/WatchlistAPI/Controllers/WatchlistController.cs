@@ -23,9 +23,21 @@ namespace WatchlistAPI.Controllers
 
             if (u != null)
             {
-                return BadRequest("User already has a Watch List");
-            }
+                //check if that video already exists
+                var check = await _context.CheckVideoExistsInWatchlistAsync(w.UserId, w.VideoIds);
+                if(check == false)
+                {
+                    //append
+                    await _context.UpdateAsync(w.UserId, w.VideoIds);
+                    return Ok();
+                }else
+                {
+                    return BadRequest("This Video Already exists in Watchlist");
 
+                }
+
+            }
+            //create
             var watchlist = new Watchlist();
             watchlist.UserId = w.UserId;
             watchlist.VideoIds = w.VideoIds;
@@ -53,6 +65,5 @@ namespace WatchlistAPI.Controllers
 
             return Ok();
         }
-
     }
 }
