@@ -121,6 +121,10 @@
               "target": "Package",
               "version": "[3.13.0, )"
             },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[6.0.31, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.25.0, )"

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using OrderAPI.Model;
 using OrderAPI.Services;
@@ -20,6 +21,7 @@ namespace OrderAPI.Controllers
         }
 
         [HttpPost("create")]
+        [Authorize]
         public async Task<ActionResult> Create([FromBody] Order o)
         {
             var u = await _context.GetByOrderIdAsync(o.OrderId);
@@ -43,6 +45,7 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet("orders")]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders([FromQuery(Name = "userId")] string userId)
         {
             var u = await _context.GetAllAsync(userId);
@@ -55,6 +58,7 @@ namespace OrderAPI.Controllers
         }
 
         [HttpGet("orderDetails")]
+        [Authorize]
         public async Task<ActionResult<Order>> GetOrderbyID([FromQuery(Name = "orderId")] string orderId)
         {
             var u = await _context.GetByOrderIdAsync(orderId);

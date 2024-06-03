@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using VideoCatalogueAPI.Model;
 using WatchlistAPI.Model;
 using WatchlistAPI.Services;
@@ -17,6 +18,7 @@ namespace WatchlistAPI.Controllers
         }
 
         [HttpPost("create")]
+        [Authorize]
         public async Task<ActionResult> Create([FromBody] Watchlist w)
         {
             var u = await _context.GetAllAsync(w.UserId);
@@ -47,6 +49,7 @@ namespace WatchlistAPI.Controllers
         }
 
         [HttpGet("get")]
+        [Authorize]
         public async Task<ActionResult<Watchlist>> GetTitles([FromQuery(Name = "userId")] string userId)
         {
             var u = await _context.GetAllAsync(userId);
@@ -59,6 +62,7 @@ namespace WatchlistAPI.Controllers
         }
 
         [HttpDelete("delete")]
+        [Authorize]
         public async Task<IActionResult> RemoveVideo([FromQuery(Name = "userId")] string userId, [FromQuery(Name = "videoId")] string videoId)
         {
             await _context.RemoveAsync(userId, videoId);

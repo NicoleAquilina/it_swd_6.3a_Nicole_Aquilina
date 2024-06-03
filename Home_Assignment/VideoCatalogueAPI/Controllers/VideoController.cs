@@ -14,6 +14,7 @@ namespace VideoCatalogueAPI.Controllers
     {
 
         [HttpGet("getbygenre")]
+        [Authorize]
         public async Task<ActionResult<List<Video>>> GetVideosByGenre(string genre)
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");
@@ -46,6 +47,7 @@ namespace VideoCatalogueAPI.Controllers
         }
 
         [HttpGet("title")]
+        [Authorize]
         public async Task<ActionResult<Video>> GetTitle(string Id)
         {
             var client = new RestClient("https://moviesdatabase.p.rapidapi.com");

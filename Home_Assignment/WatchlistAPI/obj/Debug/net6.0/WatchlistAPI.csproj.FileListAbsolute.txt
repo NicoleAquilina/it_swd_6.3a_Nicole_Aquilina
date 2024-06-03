@@ -63,3 +63,8 @@ C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assi
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\obj\Debug\net6.0\WatchlistAPI.pdb
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\obj\Debug\net6.0\WatchlistAPI.genruntimeconfig.cache
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\obj\Debug\net6.0\ref\WatchlistAPI.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\WatchlistAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

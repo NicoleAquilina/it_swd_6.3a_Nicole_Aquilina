@@ -79,3 +79,8 @@ C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assi
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\obj\Debug\net6.0\PaymentAPI.pdb
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\obj\Debug\net6.0\PaymentAPI.genruntimeconfig.cache
 C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\obj\Debug\net6.0\ref\PaymentAPI.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\ACER VX i7\Desktop\Assignements Semester 2\DP\Home_Assignment\Home_Assignment\PaymentAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll

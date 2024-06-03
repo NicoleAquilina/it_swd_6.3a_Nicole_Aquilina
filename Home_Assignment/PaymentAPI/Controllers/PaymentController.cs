@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PaymentAPI.Model;
 using PaymentAPI.Services;
 
@@ -16,6 +17,7 @@ namespace PaymentAPI.Controllers
         }
 
         [HttpPost("create")]
+        [Authorize]
         public async Task<ActionResult> Create([FromBody] Payment p)
         {
             var u = await _context.GetAsync(p.OrderId);
@@ -37,6 +39,7 @@ namespace PaymentAPI.Controllers
         }
 
         [HttpGet("getOrder")]
+        [Authorize]
         public async Task<ActionResult<Payment>> Get([FromQuery(Name = "orderId")] string orderID)
         {
             var u = await _context.GetAsync(orderID);
